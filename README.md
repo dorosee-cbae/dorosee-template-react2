@@ -18,19 +18,40 @@
 
 ```
 react-template-app/
-├── src/
-│   ├── assets/         # 이미지, 폰트 등 정적 리소스
-│   ├── modules/        # 기능별 모듈
-│   ├── pages/          # 페이지 컴포넌트
-│   ├── shared/         # 공통 컴포넌트 및 유틸리티
-│   ├── App.tsx         # 메인 애플리케이션 컴포넌트
-│   └── main.tsx        # 애플리케이션 진입점
-├── public/             # 정적 파일
-├── .env.local         # 환경 변수
-├── package.json       # 프로젝트 설정 및 의존성
-├── tsconfig.json      # TypeScript 설정
-├── vite.config.ts     # Vite 설정
-└── eslint.config.js   # ESLint 설정
+public/
+src/
+├── assets/
+│   ├── fonts/
+│   ├── icons/
+│   └── images/
+│
+├── modules/            # 도메인별 기능 모듈
+│   └── user/           # 사용자 관련 기능
+│       ├── api/        # 사용자 관련 API 호출
+│       ├── config/     # 사용자 관련 환경 설정 및 상수수
+│       ├── hooks/      # 사용자 관련 커스텀 훅
+│       ├── styles/     # 사용자 관련 스타일 관리
+│       ├── types/      # 사용자 관련 타입 정의
+│       ├── ui/         # 사용자 관련 UI 관리
+│       └── utils/      # 사용자 관련 유틸리티 함수
+
+├── shared/             # 공통으로 사용되는 코드들
+│   ├── api/            # API 관련 설정 및 인터셉터
+│   ├── components/     # 재사용 가능한 공통 컴포넌트
+│   ├── config/         # 환경 설정 및 상수
+│   ├── hooks/          # 커스텀 훅
+│   ├── layout/         # 레이아웃 관련 컴포넌트
+│   ├── store/          # 전역 상태 관리 (Zustand)
+│   ├── types/          # 타입 정의
+│   └── utils/          # 유틸리티 함수
+│
+├── .env.local          # 환경 변수
+├── .gitignore          # git 업로드 시 배제할 파일 설정
+├── .nvmrc              # node version
+├── package.json        # 프로젝트 설정 및 의존성
+├── tsconfig.json       # TypeScript 설정
+├── vite.config.ts      # Vite 설정
+└── eslint.config.js    # ESLint 설정
 ```
 
 ## 시작하기
