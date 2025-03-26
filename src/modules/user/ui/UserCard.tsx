@@ -1,7 +1,8 @@
-import { StyledUserCard } from '@/modules/user/styles/StyledUser';
 import { UserCardType } from '@/modules/user/types/user';
-import useUserHook from '@/modules/user/model/useUserHook';
+import useUserHook from '@/modules/user/hooks/useUserHook';
 import spain from '@/assets/images/spain.png';
+import { USER_DATA_NAME } from '@/modules/user/config/const';
+import { StyledUserCard } from '@/modules/user/styles/StyledUser';
 const UserCard = (defaultUser: UserCardType) => {
   const {
     handleSubmit,
@@ -11,6 +12,8 @@ const UserCard = (defaultUser: UserCardType) => {
 
   return (
     <StyledUserCard onSubmit={handleSubmit}>
+      <p>${USER_DATA_NAME}</p>
+
       <img
         src={spain}
         style={{ width: '100px', height: '100px' }}
